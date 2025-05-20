@@ -89,6 +89,12 @@ input[type=submit] {
    url(../fonts/NeulisSans-Regular/NeulisSans-Regular.eot) format("eot"),
     url(../fonts/NeulisSans-Regular/NeulisSans-Regular.ttf) format("ttf"),
      url(../fonts/NeulisSans-Regular/NeulisSans-Regular.woff) format("woff"); }
+@font-face {
+  font-family: 'NeulisSans-Black';
+  src: url(../fonts/NeulisSans-Black/NeulisSans-Black.woff2) format("woff2"),
+   url(../fonts/NeulisSans-Black/NeulisSans-Black.eot) format("eot"),
+    url(../fonts/NeulisSans-Black/NeulisSans-Black.ttf) format("ttf"),
+     url(../fonts/NeulisSans-Black/NeulisSans-Black.woff) format("woff"); }
 img{
   width: 100%;
 }
@@ -126,7 +132,7 @@ img{
 .md-bingo{
   font-family: 'NeulisSans-Regular';
   background: #FFF;
-  padding: 20px 15px;
+  padding: 20px 30px;
   border-radius: 20px;
   border: 2px solid #fc2698;
   width: 30%;
@@ -136,6 +142,11 @@ img{
 }
 .md-bingo h6{
   color: #fc2698;
+  font-size: calc(30px + 2vw);
+  letter-spacing: 80px;
+  text-align: center;
+  font-weight: 700;
+  font-family: 'NeulisSans-Black';
 }
 .bingo-board {
   display: grid;
@@ -153,7 +164,6 @@ img{
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 16px;
   font-weight: bold;
   color: #fc2698;
   box-shadow: inset 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
@@ -398,7 +408,15 @@ img{
   color: #FFF;
 
 }
+@media screen and (min-width: 1599px) and (max-width: 2000px){
+  .md-bingo h6{
+    letter-spacing: 50px;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 1400px){
+  .md-bingo h6{
+    letter-spacing: 40px;
+  }
   .md-popup-2{
     width: 40%;
     padding: 30px 20px;
@@ -462,7 +480,7 @@ img{
   .page-main{
     background: url(../images/bg-mb.jpg) no-repeat;
     background-size: 100% 100%;
-    padding-top: 10%;
+    padding-top: 8%;
   }
   .banner .img-1{
     width: 25%;
@@ -474,11 +492,11 @@ img{
   }
   .md-img-2{
     width: 50%;
-    margin-top: 5%;
+    margin-top: 3%;
     margin-bottom: 15px;
   }
   .md-title{
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
   .md-button{
     padding: 0px 10%;
@@ -498,11 +516,13 @@ img{
   }
   .md-boxes{
     padding: 0px 10%;
+    margin-bottom: 0px;
   }
   .md-boxes .md-col{
     width: 45%;
     margin-right: 10%;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+    padding: 15px 10px;
   }
   .md-boxes .md-col:nth-child(2){
     margin-right: 0%;
@@ -548,5 +568,11 @@ img{
   .md-popup-2 .md-text{
     font-size: calc(10px + 1vw);
     margin-bottom: 15px;
+  }
+  .md-bingo h6{
+    letter-spacing: 45px;
+  }
+  .md-bingo{
+    width: 90%;
   }
 }

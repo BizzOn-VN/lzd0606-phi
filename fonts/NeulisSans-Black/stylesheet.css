@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Neulis Sans';
+    src: url('NeulisSans-Black.eot');
+    src: url('NeulisSans-Black.eot?#iefix') format('embedded-opentype'),
+        url('NeulisSans-Black.woff2') format('woff2'),
+        url('NeulisSans-Black.woff') format('woff'),
+        url('NeulisSans-Black.ttf') format('truetype'),
+        url('NeulisSans-Black.svg#NeulisSans-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
