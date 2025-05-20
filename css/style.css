@@ -403,6 +403,20 @@ img{
   transition-duration: 0.5s;
   font-family: 'EuclidCircularAVN-Bold';
 }
+.md-popup-2 .main-popup{
+  position: relative;
+  margin-bottom: 20px;
+}
+.md-popup-2 .main-popup .md-bingo{
+  position: absolute;
+  width: 70%;
+  transform: translateX(-50%);
+  top: 30%;
+  left: 50%;
+}
+.md-popup-2 .main-popup .md-bingo h6{
+  margin-bottom: 0px !important;
+}
 .md-popup-2 .md-btn:hover{
   background: #000;
   color: #FFF;
@@ -410,12 +424,12 @@ img{
 }
 @media screen and (min-width: 1599px) and (max-width: 2000px){
   .md-bingo h6{
-    letter-spacing: 50px;
+    letter-spacing: 30px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1400px){
   .md-bingo h6{
-    letter-spacing: 40px;
+    letter-spacing: 30px;
   }
   .md-popup-2{
     width: 40%;
@@ -573,7 +587,7 @@ img{
     margin-bottom: 15px;
   }
   .md-bingo h6{
-    letter-spacing: 45px;
+    letter-spacing: 30px;
   }
   .md-bingo{
     width: 90%;

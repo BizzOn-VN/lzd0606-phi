@@ -25,23 +25,9 @@ jQuery(document).on("ready",function () {
 
 
 
-function set_position_bingo(){
-    var height_bingo = $('.md-bingo .bingo-cell').outerWidth();
-    
-    $('.md-bingo .bingo-cell').css('height',height_bingo);   
-
-}
- set_position_bingo();  
- $(window).resize(function(){
-  set_position_bingo();
-});
-
- window.addEventListener('resize', function(event) {
-   set_position_bingo();
-});
 
 
- // $("#md-popup-2").fancybox().trigger('click');
+
 
 
  $('.md-boxes .md-col').height(h3height); 
@@ -69,3 +55,22 @@ function set_position_bingo(){
   if (textContent.length > 1) {
     textElement.innerHTML = textContent.slice(0, -1) + '<span style="letter-spacing: 0;">' + textContent.slice(-1) + '</span>';
   }
+
+  function set_position_bingo(){
+      var height_bingo = $('.md-bingo .bingo-cell').outerWidth();
+      
+      $('.md-bingo .bingo-cell').css('height',height_bingo);   
+
+  }
+   set_position_bingo();  
+   $(window).resize(function(){
+    set_position_bingo();
+  });
+
+   window.addEventListener('resize', function(event) {
+     set_position_bingo();
+  });
+
+
+
+   // $("#md-popup-2").fancybox().trigger('click');
