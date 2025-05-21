@@ -526,10 +526,13 @@ img{
   bottom: 2%;
   left: 5%;
   border: 3px solid #fad77b;
-  padding: 0px 50px;
+  padding: 7px 50px;
   border-radius: 50px;
   color: #FFF;
-  line-height: 1;
+  font-family: 'EuclidCircularAVN-Regular';
+  text-align: center;
+  font-size: calc(2px + 1vw);
+  line-height: 0.8;
 }
 .fancybox-button{
   width: 80px;
@@ -642,7 +645,7 @@ img{
 }
 @media screen and (min-width: 768px) and (max-width: 1400px){
   .md-popup-2 .main-popup .md-span{
-    padding: 0px 30px;
+    padding: 7px 30px;
   }
   .page-generated .md-boxes .md-col{
     padding: 20px 10px;
@@ -712,7 +715,8 @@ img{
 }
 @media screen and (max-width: 767px){
   .md-popup-2 .main-popup .md-span{
-    padding: 0px 30px;
+    padding: 7px 30px;
+    font-size: calc(8px + 1vw);
   }
   .md-popup-2 .md-download img{
     width: 10%;
