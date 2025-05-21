@@ -55,7 +55,7 @@ jQuery(document).on("ready",function () {
   if (textContent.length > 1) {
     textElement.innerHTML = textContent.slice(0, -1) + '<span style="letter-spacing: 0;">' + textContent.slice(-1) + '</span>';
   }
-
+   // $("#md-popup-2").fancybox().trigger('click');
   function set_position_bingo(){
       var height_bingo = $('.md-bingo .bingo-cell').outerWidth();
       
@@ -73,4 +73,3 @@ jQuery(document).on("ready",function () {
 
 
 
-   // $("#md-popup-2").fancybox().trigger('click');
