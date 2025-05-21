@@ -55,7 +55,7 @@ jQuery(document).on("ready",function () {
   if (textContent.length > 1) {
     textElement.innerHTML = textContent.slice(0, -1) + '<span style="letter-spacing: 0;">' + textContent.slice(-1) + '</span>';
   }
-   $("#md-popup-2").fancybox().trigger('click');
+   // $("#md-popup-2").fancybox().trigger('click');
 
 
       
