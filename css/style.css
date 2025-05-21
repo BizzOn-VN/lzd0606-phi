@@ -334,7 +334,6 @@ img{
 
 .bingo-cell {
   width: 100%;
-  height: 60px;
   background-color: #fff;
   border: 1px solid #fc2698;
   display: flex;
@@ -343,6 +342,7 @@ img{
   font-weight: bold;
   color: #fc2698;
   box-shadow: inset 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+  aspect-ratio: 1 / 1;
 }
 
 .bingo-cell::before {
@@ -803,5 +803,8 @@ img{
   }
   .md-boxes .md-col:last-child{
     margin-bottom: 20px;
+  }
+  .md-bingo h6{
+    letter-spacing: 20px;
   }
 }

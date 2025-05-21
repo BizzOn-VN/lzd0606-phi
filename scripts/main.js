@@ -56,20 +56,7 @@ jQuery(document).on("ready",function () {
     textElement.innerHTML = textContent.slice(0, -1) + '<span style="letter-spacing: 0;">' + textContent.slice(-1) + '</span>';
   }
    $("#md-popup-2").fancybox().trigger('click');
-  function set_position_bingo(){
-      var height_bingo = $('.md-bingo .bingo-cell').outerWidth();
+
+
       
-      $('.md-bingo .bingo-cell').css('height',height_bingo);   
-
-  }
-   set_position_bingo();  
-   $(window).resize(function(){
-    set_position_bingo();
-  });
-
-   window.addEventListener('resize', function(event) {
-     set_position_bingo();
-  });
-
-
 
