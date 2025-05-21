@@ -606,7 +606,8 @@ img{
   left: 50%;
 }
 .md-popup-2 .main-popup .md-bingo h6{
-  margin-bottom: 0px !important;
+  margin-bottom: 3% !important;
+  padding: 0px 5%;
 }
 .md-popup-2 .md-btn:hover{
   background: #000;
