@@ -469,6 +469,7 @@ img{
   display: block;
   margin-left: 20px;
   margin-bottom: 10px;
+  font-family: 'EuclidCircularAVN-Medium';
 }
 .md-popup .md-col{
   width: 45%;
@@ -508,6 +509,7 @@ img{
   padding: 0px 15%;
   font-size: calc(4px + 1vw);
   line-height: 1;
+  font-family: 'EuclidCircularAVN-Regular';
 }
 .md-popup .md-text a{
   text-decoration: underline;
@@ -518,6 +520,16 @@ img{
   color: #ff0070;
   font-style: italic;
   font-size: calc(4px + 1vw);
+}
+.md-popup-2 .main-popup .md-span{
+  position: absolute;
+  bottom: 2%;
+  left: 5%;
+  border: 3px solid #fad77b;
+  padding: 0px 50px;
+  border-radius: 50px;
+  color: #FFF;
+  line-height: 1;
 }
 .fancybox-button{
   width: 80px;
@@ -598,6 +610,24 @@ img{
   color: #FFF;
 
 }
+.md-popup-2 .md-download{
+  text-align: center;
+  display: block;
+  padding: 0px 5%;
+  margin-bottom: 30px;
+}
+.md-popup-2 .md-download img{
+  width: 8%;
+  float: left;
+  margin-top: 10px;
+}
+.md-popup-2 .md-download span{
+  width: 90%;
+  float: right;
+  font-family: 'EuclidCircularAVN-Regular';
+  font-weight: 600;
+  font-size: calc(4px + 1vw);
+}
 .page-generated .md-boxes .md-col{
   padding: 40px 10px 40px 10px;
 }
@@ -611,6 +641,9 @@ img{
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1400px){
+  .md-popup-2 .main-popup .md-span{
+    padding: 0px 30px;
+  }
   .page-generated .md-boxes .md-col{
     padding: 20px 10px;
   }
@@ -678,6 +711,18 @@ img{
   }
 }
 @media screen and (max-width: 767px){
+  .md-popup-2 .main-popup .md-span{
+    padding: 0px 30px;
+  }
+  .md-popup-2 .md-download img{
+    width: 10%;
+  }
+  .md-popup-2 .md-download span{
+    width: 86%;
+  }
+  .md-popup-2 .md-download span{
+    font-size: calc(10px + 1vw);
+  }
   .page-generated .md-boxes .md-col{
     padding: 30px 10px;
   }
