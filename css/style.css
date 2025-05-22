@@ -523,10 +523,10 @@ img{
 }
 .md-popup-2 .main-popup .md-span{
   position: absolute;
-  bottom: 2%;
-  left: 5%;
+  bottom: 10px;
+  left: 10px;
   border: 3px solid #fad77b;
-  padding: 7px 50px;
+  padding: 7px 5%;
   border-radius: 50px;
   color: #FFF;
   font-family: 'EuclidCircularAVN-Regular';
@@ -639,15 +639,17 @@ img{
   margin-bottom: 20px;
   width: 50%;
 }
+@media screen and (min-width: 2000px){
+  .page-main{
+    height: 105vh;
+  }
+}
 @media screen and (min-width: 1599px) and (max-width: 2000px){
   .md-bingo h6{
     letter-spacing: 30px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1400px){
-  .md-popup-2 .main-popup .md-span{
-    padding: 7px 30px;
-  }
   .page-generated .md-boxes .md-col{
     padding: 20px 10px;
   }
@@ -716,7 +718,6 @@ img{
 }
 @media screen and (max-width: 767px){
   .md-popup-2 .main-popup .md-span{
-    padding: 7px 30px;
     font-size: calc(8px + 1vw);
   }
   .md-popup-2 .md-download img{
