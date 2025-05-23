@@ -341,7 +341,6 @@ img{
   align-items: center;
   font-weight: bold;
   color: #fc2698;
-  box-shadow: inset 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
   aspect-ratio: 1 / 1;
 }
 
@@ -870,5 +869,109 @@ img{
   }
   .md-bingo h6{
     letter-spacing: 20px;
+  }
+}
+
+
+.page-winner .md-form{
+  padding: 0px 30%;
+  position: relative;
+  z-index: 2;
+}
+.page-winner .md-form input{
+  width: 100%;
+  border-radius: 50px;
+  border: 2px solid #e56da3;
+  padding: 10px 20px;
+}
+.page-winner .md-form .md-row{
+  margin-bottom: 30px;
+  padding: 0px 5%;
+}
+.page-winner .md-form .md-col{
+  float: left;
+  width: 45%;
+  margin-right: 9%;
+}
+.page-winner .md-form .md-col:last-child{
+  margin-right: 0%;
+}
+.page-winner .md-title{
+  margin-bottom: 0px;
+}
+.page-winner .md-title p{
+  font-family: 'EuclidCircularAVN-Bold';
+  font-size: calc(20px + 1vw);
+}
+.page-winner .md-form input[type='button']{
+  font-family: 'EuclidCircularAVN-Bold';
+  background: #ff0070;
+  border-radius: 50px;
+  border: 2px solid #b1aeb0;
+  width: 100%;
+  display: block;
+  padding: 10px 0px;
+  color: #FFF;
+  margin-bottom: 3%;
+  transition-duration: 0.5s;
+  padding: 20px 20px;
+  font-size: calc(20px + 1vw);
+}
+.page-winner .md-form input[type='button']:hover{
+  background: #FFF;
+  color: #ff0070;
+}
+.page-winner .md-form .md-text{
+  text-align: center;
+  font-size: calc(2px + 0.8vw);
+  font-family: 'EuclidCircularAVN-Light';
+}
+.page-winner .md-form .md-text a{
+      text-decoration: underline;
+    font-family: 'EuclidCircularAVN-Bold';
+    color: #fff;
+}
+.md-popup-3{
+  display: none;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1400px){
+  .page-winner .md-form .md-row{
+    margin-bottom: 15px;
+  }
+  .page-winner .md-form input[type='button']{
+    padding: 15px 20px;
+    font-size: calc(12px + 1vw);
+  }
+}
+@media screen and (max-width: 767px){
+  .page-winner .md-form{
+    padding: 0px 5%;
+  }
+  .page-winner .md-title{
+    padding: 0px 3%;
+  }
+  .page-winner .md-form .md-row{
+    margin-bottom: 20px;
+  }
+  .page-winner .md-form input[type='button']{
+    padding: 15px 20px;
+    font-size: calc(12px + 1vw);
+  }
+  .page-winner .md-form .md-text{
+    font-size: calc(6px + 1vw);
+    padding: 0px 20%;
+  }
+  .page-winner .md-title p{
+    font-size: calc(15px + 1vw);
+  }
+  .page-winner .md-title span{
+    font-size: calc(10px + 1vw);
+  }
+}
+@media screen and (min-width: 1599px) and (max-width: 2000px){
+  .page-winner{
+    height: auto;
+    padding: 0px 0px 3%;
   }
 }
