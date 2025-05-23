@@ -468,7 +468,7 @@ img{
   display: block;
   margin-left: 20px;
   margin-bottom: 10px;
-  font-family: 'EuclidCircularAVN-Medium';
+  font-family: 'EuclidCircularAVN-Regular';
 }
 .md-popup .md-col{
   width: 45%;
@@ -483,6 +483,11 @@ img{
   display: table;
   margin: 0 auto 30px auto;
   float: none;
+  width: 60%;
+}
+.md-popup .md-col:last-child label{
+  margin-left: 0px;
+  text-align: center;
 }
 .md-popup input{
   width: 100%;
@@ -498,6 +503,7 @@ img{
   color: #FFF;
   cursor: pointer;
   transition-duration: 0.5s;
+  font-family: 'EuclidCircularAVN-Regular';
 }
 .md-popup input[type="button"]:hover{
   background: #FFF;
