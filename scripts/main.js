@@ -50,7 +50,10 @@ jQuery(document).on("ready",function () {
     };
  window.addEventListener("resize", onresize);
 
-    // $("#md-popup-2").fancybox().trigger('click');
+ // $("#md-popup-2").fancybox({
+ //                   clickSlide: false,
+ //                  clickOutside: false,
+ //               }).trigger('click');
     // $("#md-popup-3").fancybox().trigger('click');
 
 

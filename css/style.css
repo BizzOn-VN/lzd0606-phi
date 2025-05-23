@@ -566,8 +566,6 @@ img{
   padding: 7%;
 }
 .md-popup-2 .md-text{
-  width: 70%;
-  display: table;
   margin: 0 auto 30px auto;
   text-align: center;
   font-size: calc(4px + 1vw);
@@ -622,20 +620,18 @@ img{
 .md-popup-2 .md-download{
   text-align: center;
   display: block;
-  padding: 0px 5%;
   margin-bottom: 30px;
 }
 .md-popup-2 .md-download img{
   width: 8%;
   float: left;
-  margin-top: 10px;
 }
 .md-popup-2 .md-download span{
-  width: 90%;
+  width: 91%;
   float: right;
   font-family: 'EuclidCircularAVN-Regular';
   font-weight: 600;
-  font-size: calc(4px + 1vw);
+  font-size: calc(2px + 1vw);
 }
 .page-generated .md-boxes .md-col{
   padding: 40px 10px 40px 10px;
@@ -673,7 +669,6 @@ img{
     margin-bottom: 15px;
   }
   .md-popup-2 .md-text{
-    width: 65%;
     margin-bottom: 10px;
   }
   .md-popup-2 .md-text-2{
@@ -729,7 +724,7 @@ img{
     width: 10%;
   }
   .md-popup-2 .md-download span{
-    width: 86%;
+    width: 90%;
   }
   .md-popup-2 .md-download span{
     font-size: calc(10px + 1vw);
