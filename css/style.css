@@ -106,8 +106,10 @@ img{
   background-image: url(../images/bg.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  height: 100vh;
+  padding-bottom: 5%;
+  height: auto !important;
   position: relative;
+
 }
 .ico-9{
   position: absolute;
@@ -771,6 +773,7 @@ img{
     margin-bottom: 30px;
     position: relative;
     z-index: 2;
+    padding: 0px 20px;
   }
   .md-button{
     padding: 0px 10%;
@@ -977,11 +980,5 @@ img{
   .page-winner{
     height: auto;
     padding: 0px 0px 3%;
-  }
-}
-@media screen and (min-width: 2800px){
-  .page-main{
-    height: auto;
-    padding-bottom: 5%;
   }
 }
