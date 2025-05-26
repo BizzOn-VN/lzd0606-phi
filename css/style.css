@@ -98,7 +98,10 @@ input[type=submit] {
 img{
   width: 100%;
 }
-
+.page-winner{
+  height: auto !important;
+  padding-bottom: 5%;
+}
 .page-main{
   background-image: url(../images/bg.jpg);
   background-size: 100% 100%;
