@@ -979,3 +979,9 @@ img{
     padding: 0px 0px 3%;
   }
 }
+@media screen and (min-width: 2800px){
+  .page-main{
+    height: auto;
+    padding-bottom: 5%;
+  }
+}
