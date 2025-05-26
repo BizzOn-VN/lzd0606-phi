@@ -941,7 +941,15 @@ img{
 .md-popup-3{
   display: none;
 }
-
+.md-popup-3 .main-popup img{
+  width: 20%;
+  display: table;
+  margin: 0 auto;
+}
+.md-popup-3 h6 span{
+  display: block;
+  color: #ff0070;
+}
 @media screen and (min-width: 768px) and (max-width: 1400px){
   .page-winner .md-form .md-row{
     margin-bottom: 15px;
