@@ -526,7 +526,7 @@ img{
   font-family: 'EuclidCircularAVN-Bold';
   font-size: calc(2px + 1vw);
 }
-.md-popup p.error{
+p.error{
   color: #ff0070;
   font-style: italic;
   font-size: calc(4px + 1vw);
