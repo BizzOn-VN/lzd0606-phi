@@ -991,3 +991,43 @@ p.error{
     padding: 0px 0px 3%;
   }
 }
+.md-popup-2{
+  position: relative;
+}
+.loader-spinner {
+  
+  border: 6px solid #f3f3f3; /* Light grey */
+  border-top: 6px solid #3498db; /* Blue */
+  border-radius: 50%; /* Makes it round */
+  width: 100px;
+  height: 100px;
+  animation: spin 1s linear infinite; /* Animation: spin for 1s, linear, infinite */
+
+  /* Optional: Centering */
+  margin: 0px auto;
+  display: block;
+
+}
+.loader{
+  visibility: hidden;
+  background: #FFF;
+  opacity: 0.9;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  top: 0;
+  justify-content: center;
+      align-items: center;
+      display: flex;
+      height: 100%;
+      z-index: 2;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loader.active{
+  visibility: visible;
+}
