@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>PHILIPPINES - CALLED NUMBER CREATOR</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+    .title {
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .button-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .item-button {
+      padding: 10px 20px;
+      background-color: #eee;
+      border: 2px solid #ccc;
+      border-color: green;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: background-color 0.2s;
+    }
+    .item-button.used {
+      background-color: #ccc;
+      cursor: not-allowed;
+      border-color: rgb(255, 65, 156);
+;
+    }
+    .called-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    .called-item {
+      background-color: white;
+      border-color: rgb(255, 65, 156);
+      border: 2px solid #ff419c;
+      padding: 10px 10px;
+      border-radius: 5px; 
+      position: relative;
+    }
+    .remove-btn {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      background-color: red;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+      font-size: 10px;
+      line-height: 16px;
+      cursor: pointer;
+    }
+    .output {
+      background-color: orange;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .controls button {
+      padding: 10px 15px;
+      margin-right: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .copy-btn {
+      background-color: green;
+      color: white;
+    }
+    .reset-btn {
+      background-color: purple;
+      color: white;
+    }
+    .history {
+      margin-top: 20px;
+    }
+    .history-entry {
+      margin-bottom: 5px;
+      font-family: sans-serif;
+      
+    }
+  </style>
+
+
+  <script>
+
+  // Cảnh báo khi reload trang
+  window.addEventListener("beforeunload", function (e) {
+    e.preventDefault();
+    e.returnValue = "Do you wan to reload?";
+  });
+</script>
+</head>
+<body>
+  <h2>LazBingoLive.com: called-number creator</h2>
+  <div class="section">
+    <div class="button-grid" id="product-list"></div>
+  </div>
+
+  <div class="section">
+    <div class="title">Number list</div>
+    <div class="button-grid" id="number-list"></div>
+  </div>
+  <div class="section">
+    <div class="title">Called-number</div>
+    <div class="called-list" id="called-list"></div>
+  </div>
+  <div class="section">
+    <div class="title">Called-number list</div>
+    <div class="output" id="output"></div>
+    <div class="controls">
+      <button class="copy-btn" id="copy-btn">Copy</button>
+      <button class="reset-btn" id="reset-btn">Start New session</button>
+    </div>
+  </div>
+  <div class="section history">
+    <div class="title">Called-number history</div>
+    <div id="history"></div>
+  </div>
+
+  <script>
+    const products = [
+    ];
+
+    const numbers = Array.from({length: 75}, (_, i) => (i + 1).toString());
+    let calledItems = [];
+    const productList = document.getElementById("product-list");
+    const numberList = document.getElementById("number-list");
+    const calledList = document.getElementById("called-list");
+    const output = document.getElementById("output");
+    const copyBtn = document.getElementById("copy-btn");
+    const resetBtn = document.getElementById("reset-btn");
+    const historyDiv = document.getElementById("history");
+
+    const renderButtons = () => {
+      productList.innerHTML = "";
+      products.forEach(name => {
+        const btn = document.createElement("button");
+        btn.textContent = name;
+        btn.className = "item-button";
+        if (calledItems.includes(name)) btn.classList.add("used");
+        btn.onclick = () => handleClick(name, btn);
+        productList.appendChild(btn);
+      });
+
+      numberList.innerHTML = "";
+      numbers.forEach(num => {
+        const btn = document.createElement("button");
+        btn.textContent = num;
+        btn.className = "item-button";
+        if (calledItems.includes(num)) btn.classList.add("used");
+        btn.onclick = () => handleClick(num, btn);
+        numberList.appendChild(btn);
+      });
+    };
+
+    const handleClick = (value, btn) => {
+      if (calledItems.includes(value)) return;
+      calledItems.push(value);
+      btn.classList.add("used");
+      updateCalledList();
+    };
+
+    const updateCalledList = () => {
+      calledList.innerHTML = "";
+      calledItems.forEach((val, idx) => {
+        const item = document.createElement("div");
+        item.className = "called-item";
+        item.textContent = val;
+        const remove = document.createElement("button");
+        remove.className = "remove-btn";
+        remove.textContent = "×";
+        remove.onclick = () => removeItem(idx);
+        item.appendChild(remove);
+        calledList.appendChild(item);
+      });
+      output.textContent = calledItems.join(", ");
+    };
+
+    const removeItem = (idx) => {
+      calledItems.splice(idx, 1);
+      renderButtons();
+      updateCalledList();
+    };
+
+    copyBtn.onclick = () => {
+      navigator.clipboard.writeText(output.textContent);
+      copyBtn.textContent = "Copied";
+      setTimeout(() => copyBtn.textContent = "Copy", 2000);
+    };
+
+    resetBtn.onclick = () => {
+      if (confirm("Star new session will clear all current data created?")) {
+        const now = new Date();
+        const timestamp = `${now.toLocaleDateString()}, ${now.toLocaleTimeString()}`;
+        const historyEntry = `${historyDiv.children.length + 1}. ${timestamp}: ${calledItems.join(", ")}`;
+        const div = document.createElement("div");
+        div.className = "history-entry";
+        div.textContent = historyEntry;
+        historyDiv.prepend(div);
+        saveHistoryEntry(historyEntry);
+        calledItems = [];
+        renderButtons();
+        updateCalledList();
+      }
+    };
+
+    const saveHistoryEntry = (entry) => {
+      const history = JSON.parse(localStorage.getItem("callHistory") || "[]");
+      history.unshift(entry);
+      localStorage.setItem("callHistory", JSON.stringify(history));
+    };
+
+    const loadHistory = () => {
+      const history = JSON.parse(localStorage.getItem("callHistory") || "[]");
+      history.forEach(entry => {
+        const div = document.createElement("div");
+        div.className = "history-entry";
+        div.textContent = entry;
+        historyDiv.appendChild(div);
+      });
+    };
+
+    renderButtons();
+    updateCalledList();
+    loadHistory();
+  </script>
+</body>
+</html>
